@@ -453,3 +453,9 @@ body{
     background-color: rgb(73, 204, 218);
     background-image: url(https://i.gifer.com/GIWH.gif);
 }
+a{
+    color: lightcyan;
+    font-weight: bold;
+    text-shadow: 0 0 19px rgb(32, 172, 227);
+    text-decoration: none;
+}
