@@ -16,7 +16,7 @@ function addJumpListener() {
         }
     })
 }
-window.addEventListener('click', jump);
+gameContainerElement.addEventListener('click', jump);
 let jumping = false;
 function jump() {
     if(jumping) {
