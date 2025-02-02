@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino JS</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onclick="jump()">
-    
-    <div class="game-container">
-        <div class="score-card">
-            <span>HI</span>
-            <span class="high-score"></span>
-            <span class="score"></span>
-        </div>
-        <div class="player"></div>
-
-        <div class="obstacle"></div>
-
-        <div class="restart-game">
-            <div class="content">
-                <span class="text">RESTART</span>
-                <button onclick="restart()" class="btn-reset-game"></button>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Yourself</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Start Screen with Question -->
+    <div class="start-screen">
+      <p class="question">ARE YOU READY TO DODGE ALL THE COUPLES? 😼</p>
+      <button onclick="startGame()" class="btn-start-game">YES</button>
     </div>
 
+    <div class="game-container" style="display: none">
+      <div class="score-card">
+        <span>HI</span>
+        <span class="high-score"></span>
+        <span class="score"></span>
+      </div>
+      <div class="player"></div>
+      <div class="obstacle"></div>
+      <div class="restart-game">
+        <div class="content">
+          <span class="text">Aura +<span id="aura"></span></span>
+          <button onclick="restart()" class="btn-reset-game"></button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>©2025 Made with 😋♥ by Soham</p>
+    </footer>
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+      <source src="./assets/selmon.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>

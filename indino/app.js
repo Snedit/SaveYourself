@@ -11,12 +11,12 @@ const OBSTACLE_SIZES = ['xs','s','m','l'];
  */
 function addJumpListener() {
     document.addEventListener('keydown', event => {
-        if(event.key === ' ' || event.key === 'ArrowUp') {
+        if(event.key === ' ' || event.key === 'ArrowUp' ) {
             jump();
         }
     })
 }
-
+window.addEventListener('click', jump);
 let jumping = false;
 function jump() {
     if(jumping) {
@@ -117,6 +117,7 @@ function stopGame() {
     clearInterval(changeObstacleInterval);
     restartGameElement.classList.add('show');
     gameContainerElement.classList.add('stop')
+    document.getElementById("aura").innerHTML = score;
 }
 
 function restart() {
@@ -131,4 +132,16 @@ function main() {
     randomiseObstacle();
 };
 
-main();
+function startGame() {
+    // Hide start screen
+    document.querySelector(".start-screen").style.display = "none";
+    document.getElementById("bg-music").play();
+    // Show game container
+    document.querySelector(".game-container").style.display = "block";
+    setTimeout(() => {  
+        document.querySelector(".game-container").style.opacity= 1;
+
+        main();
+    }, 500);
+    // Play background music
+}
